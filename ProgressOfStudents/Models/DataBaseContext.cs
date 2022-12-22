@@ -14,7 +14,8 @@ namespace ProgressOfStudents.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=WIN-4GV8HVV3T62\\SQLEXPRESS;Database=StudentsDb;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=WIN-4GV8HVV3T62\\SQLEXPRESS;Database=StudentsDb;" +
+                "Trusted_Connection=True;TrustServerCertificate=True;");
         }
     }
 }

@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Add" Height="295" Width="780" WindowStartupLocation="CenterScreen"  ResizeMode="NoResize" WindowStyle="None" Icon="/Images/internship.png">
+        Title="Add" Height="295" Width="780" WindowStartupLocation="CenterScreen"  ResizeMode="NoResize" WindowStyle="None" Icon="/Images/internship.png" Background="#FFA286BB">
     <Grid>
         <TextBox Name="UserNameTextBox" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  Margin="239,45,220,206" RenderTransformOrigin="-2.073,0.543" FontFamily="Arial" FontSize="14" TextWrapping="Wrap"/>
         <TextBox Name="CreditBookTextBox" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="239,105,220,146" RenderTransformOrigin="-2.073,0.543" FontFamily="Arial" TextWrapping="Wrap" FontSize="14" PreviewTextInput="CreditBookTextBox_PreviewTextInput"/>

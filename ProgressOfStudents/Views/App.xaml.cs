@@ -13,5 +13,12 @@ namespace ProgressOfStudents
     /// </summary>
     public partial class App : Application
     {
+        [STAThread()]
+        static void Main()
+        {
+            App app = new();
+            app.InitializeComponent();
+            app.Run();
+        }
     }
 }

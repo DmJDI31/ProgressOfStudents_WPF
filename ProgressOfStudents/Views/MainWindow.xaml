@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:ProgressOfStudents"
         mc:Ignorable="d"
         Title="MyDataGrid"
-        Background ="DarkGray" Height="350" Width="978" WindowStartupLocation="CenterScreen"  ResizeMode="CanMinimize" Icon="/Images/internship.png"
+        Background ="#FFA286BB" Height="350" Width="978" WindowStartupLocation="CenterScreen"  ResizeMode="CanMinimize" Icon="/Images/internship.png"
         MouseLeftButtonDown = "Window_MouseLeftButtonDown">
     <Grid>
-        <DataGrid x:Name="StudentAcademicPerformanceDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10 0 260 10" Padding="0" CellEditEnding="StudentAcademicPerformanceDataGrid_CellEditEnding">
+        <DataGrid x:Name="StudentAcademicPerformanceDataGrid" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10 0 260 10" Padding="0" CellEditEnding="StudentAcademicPerformanceDataGrid_CellEditEnding" Foreground="White" Background="White">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="#FF8A2BE2"></Setter>
@@ -19,19 +19,20 @@
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Header=" Student Id" Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" Width="100"/>
-                <DataGridTextColumn Header=" Student FullName" Width="190" Binding="{Binding FullName, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Header=" Student CreditBook" Width="190" Binding="{Binding CreditBook, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Header=" Student AverageScore" Width="185" Binding="{Binding AverageScore, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header=" Id" Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" Width="100" Foreground="Black"/>
+                <DataGridTextColumn Header=" FullName" Width="190" Binding="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" FontWeight="Normal" Foreground="Black"/>
+                <DataGridTextColumn Header=" CreditBook" Width="190" Binding="{Binding CreditBook, UpdateSourceTrigger=PropertyChanged}" Foreground="Black"/>
+                <DataGridTextColumn Header=" AverageScore" Width="186" Binding="{Binding AverageScore, UpdateSourceTrigger=PropertyChanged}" Foreground="Black"/>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button
                   x:Name="ButtonDelete"
+                  Style="{StaticResource RoundButtonTemplate}"
                   HorizontalContentAlignment="Center"
                   VerticalContentAlignment="Center"
                   Content="X" Width="auto" Height="auto"
-                  Foreground="Red" Background="Transparent" FontWeight="ExtraBlack"
+                  Foreground="White" Background="#FF8A2BE2" FontWeight="ExtraBlack"
                   Click="ButtonDelete_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

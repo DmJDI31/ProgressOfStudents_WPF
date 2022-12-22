@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using String = System.String;
 
 namespace ProgressOfStudents
 {
@@ -68,7 +70,8 @@ namespace ProgressOfStudents
 
         private void AverageScoreTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (!Char.IsDigit(e.Text, 0))
+            
+            if (sender is TextBox textBox && !e.Text.All(ch => char.IsDigit(ch) || ch == '.')) 
             {
                 e.Handled = true;
             }
